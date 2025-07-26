@@ -1,0 +1,122 @@
+.container{
+    width: 1128px;
+    margin: 0 auto;
+}
+.gallery{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    justify-content: space-between;
+}
+.gallery-item{
+    width: calc((100% - 72px)/3);
+    max-height: 300px;
+    height: auto;
+    border: 1px solid black;
+    
+}
+.gallery-image{
+    max-height: 200px;
+    width: 360px;
+    object-fit: cover;
+}
+.img-information{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    height: 48px;
+    width: 100%;
+}
+.img-information li{
+    text-align: center;
+    width: 20%;
+}
+.img-information li > span{
+    display: block;
+}
+.img-information-title{
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    font-weight: 600;
+}
+.img-information-content{
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    font-weight: 400;
+}
+.loader {
+      width: 48px;
+      height: 48px;
+      border:10px solid #FFF;
+      border-radius: 50%;
+      position: relative;
+      transform:rotate(45deg);
+      box-sizing: border-box;
+      margin: 0 auto;
+    }
+    .loader::before {
+      content: "";
+      position: absolute;
+      box-sizing: border-box;
+      inset:-10px;
+      border-radius: 50%;
+      border:10px solid #FF3D00;
+      animation: prixClipFix 2s infinite linear;
+    }
+
+    @keyframes prixClipFix {
+        0%   {clip-path:polygon(50% 50%,0 0,0 0,0 0,0 0,0 0)}
+        25%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 0,100% 0,100% 0)}
+        50%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,100% 100%,100% 100%)}
+        75%  {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)}
+        100% {clip-path:polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)}
+    }
+      
+.loader-hidden {
+  display: none;
+}
+form{
+    width: 371px;
+    margin: 0 auto;
+}
+input{
+    padding: 16px 8px;
+    width: 244px;
+    border-radius: 4px;
+    border: 1px solid #808080;
+    color: #2E2F42;
+    outline: none;
+    font-size: 16px;
+}
+input:hover{
+    border: 1px solid #000000;
+}
+input:focus{
+    border:1px solid #4E75FF;
+}
+input::placeholder{
+    color: #808080;
+}
+button{
+    outline: none;
+    border: none;
+    background-color: #4E75FF;
+    color: #FFFFFF;
+    font-size: 16px;
+    letter-spacing: 0.04em;
+    line-height: 24px;
+    font-weight: 500;
+    padding: 14px 16px;
+    border-radius: 4px;
+    transition: all .3s ease-in-out;
+}
+button:hover{
+    background-color: #6C8CFF;
+}
+.load-btn{
+    margin: 0 auto;
+}
